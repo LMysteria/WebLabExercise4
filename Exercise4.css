@@ -1,0 +1,214 @@
+:root{
+    --border: black;
+    --text: black;
+    --background: white;
+    --fadetext: grey;
+    --fadebackground: lightgrey;
+}
+html{
+    background-color: var(--background);
+}
+body{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-self: center;
+    border: 1px solid var(--border);
+    min-height: 100vh;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--background);
+}
+header .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 5px;
+    color: var(--text)
+}
+img{
+    margin-right: 10px;
+}
+header .top div{
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+}
+header button{
+    margin-left: 10px;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+nav{
+    justify-self: right;
+}
+nav a{
+    color: var(--text);
+    text-decoration: none;
+}
+header .title{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 50px 0px;
+    
+}
+header .title h1{
+    margin-bottom: 0px;
+    color: var(--text)  
+}
+header .title p{
+    color: var(--fadetext);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    color: var(--text)
+
+}
+main .content, .preview div{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background);
+}
+.Project{
+    flex: 2;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding-top: 10px;
+}
+.Project div,h2{
+    padding: 10px;
+    margin:auto;
+}
+.section-container{
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+}
+.section-container section{
+    flex: 1;
+    border-bottom: 1px solid var(--border);
+    padding: 10px;
+
+}
+.Education{
+    flex: 4;
+    border-left: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 10px;
+}
+.review{
+    padding: 10px;
+    background-color: var(--background);
+}
+.review div{
+    display: flex;
+    flex-direction: row;
+    gap: 10px
+}
+.review section{
+    flex: 1;
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.review label{
+    color: var(--fadetext);
+}
+footer{
+    text-align: center;
+    margin-top: 5%;
+    font-weight: bold;
+    background-color: var(--background);
+    margin-top: 0px;
+    color: var(--text)
+}
+.border-bottom{
+    border-bottom: 1px solid var(--border);
+}
+@media only screen and (max-width: 900px) {
+    header button{
+        width: 100%;
+        margin-left: 0px;
+        padding: 0px;
+    }
+    header .top{
+        flex-direction: column;
+        text-align: center;
+        gap: 15px
+    }
+    header .top div{
+        flex-direction: column;
+        margin-right: 0px;
+        justify-content: center;
+    }
+    header .top div img{
+        margin: auto;
+    }
+    header .title{
+        margin: auto;
+    }
+    header .title h1{
+        font-size:30px;
+    }
+    header .title p{
+        margin: auto;
+    }
+    main .content{
+        flex-direction: column;
+        text-align: center;
+    }
+    .Project{
+        width: 100%;
+        padding-top: 0px;
+        border-right: none;
+    }
+    h2{
+        font-size: 25px;
+        padding: 5px 0px;
+        width: 100%;
+    }
+    .Project h2, .section-container h2{
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 0px;
+    }
+    .Project div{
+        background-color: var(--fadebackground);
+    }
+    .section-container section{
+        background-color: var(--fadebackground);
+        text-align: left;
+    }
+    section h3,h4,p{
+        margin: auto;
+    }
+    .Education{
+        padding: 0px;
+        border-left: 0px;
+    }
+    .Education div{
+        text-align: left;
+        padding: 0px 10px;
+    }
+    .not-first-review{
+        display: none;
+        background-color: var(--background);
+    }
+    .review{
+        margin: 0px 15px;  
+    }
+    .review section{
+        width: 95%;
+        padding: 0px 15px;
+    }
+}
+nav a:hover{
+    color: blue;
+}

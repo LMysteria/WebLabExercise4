@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Exercise4.css">
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="top">
+        <div>
+        <img src="Image/icon.png" width="30px" height="30px">
+        <label>your name</label>
+        <button onclick="ModeBtnClick()" id="ModeBtn">Light</button>
+        </div>
+        <nav>
+            <a href="">Home</a>
+            /
+            <a href="">Projects</a>
+            /
+            <a href="">Article</a>
+            /
+            <a href="">Contact</a>
+        </nav>
+        </div>
+        
+        <div class="title">
+        <h1>Frontend Developer</h1>
+        <p>html only with proper layout, no styling</p>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <aside class="Project">
+                <h2>Projects</h2>
+                <div class="border-bottom">HTML Only Portfolio</div>
+                <div class="border-bottom">Calculator</div>
+                <div class="border-bottom">Quiz App</div>
+                <div class="border-bottom">Countdown Timer</div>
+                <div>Produce Upcoming Page</div>
+            </aside>
+            <div class="section-container">
+                <h2>Working Experience</h2>
+                <section>
+                    <h4>roadmap.sh</h4>
+                    <p>Solved all the frontend projects</p>
+                    <a href="">Visit my Profile</a>
+                </section>
+                <section>
+                    <h3>OpenSource Work</h3>
+                    <p>Contribute to 50 opensource projects. Made my own projects with 200 Github Stars</p>
+                    <a href="">Visit my GitHub Profile</a>
+                </section>
+            </div>
+            <aside class="Education">
+                <h2>Education</h2>
+                <div>
+                    <p>Graduate with 3.76 out of 4 CGPA. Won Acme Hackathon. Organized 30 sessions.</p>
+                    <p>Courses I took:</p>
+                    <div>
+                        <p>- Object Oriented Programming</p>
+                        <p>- Data Structure and Algorithms</p>
+                        <p>- Web Engineering</p>
+                        <p>- Artificial Intelligence</p>
+                        <p>- Human Computer Interaction</p>
+                        <p>- Computer Graphic</p>
+                        <p>- Database Management Systems</p>
+                        <p>- Distributed Database Systems</p>
+                        <p>- Discreet Mathematics</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <div class="review">
+            <h2>Reviews from my Teachers</h2>
+            <div>
+                <section>
+                    <p>John doe was a brilliant student; always stood out with his assignments.</p>
+                    <label>Jane Doe</label><br>
+                    <label>Assignment Professor</label>
+                </section>
+                <section class="not-first-review">
+                    <p>John doe was a brilliant student; always stood out with his assignments.</p>
+                    <label>Jane Doe</label><br>
+                    <label>Assignment Professor</label>
+                </section>
+                <section class="not-first-review">
+                    <p>John doe was a brilliant student; always stood out with his assignments.</p>
+                    <label>Jane Doe</label><br>
+                    <label>Assignment Professor</label>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; all right reserved 2025</p>
+    </footer>
+</body>
+</html>
+<script>
+    let mode = document.querySelector(':root');
+    function ModeBtnClick(){
+        if (getComputedStyle(mode).getPropertyValue('--background')=='white'){
+            mode.style.setProperty('--border', 'white');
+            mode.style.setProperty('--text', 'white');
+            mode.style.setProperty('--background', 'grey');
+            mode.style.setProperty('--fadetext', 'lightgrey');
+            document.getElementById('ModeBtn').innerHTML = "Dark"
+        }
+        else{
+            mode.style.setProperty('--border', 'black');
+            mode.style.setProperty('--text', 'black');
+            mode.style.setProperty('--background', 'white');
+            mode.style.setProperty('--fadetext', 'grey');
+            document.getElementById('ModeBtn').innerHTML = "Light"
+        }
+    }
+</script>
